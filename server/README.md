@@ -6,8 +6,13 @@
 
 ### Express server setup
 
+###### Install
+
+##
+
 1. Course plan
 2. Envuronment setup
 3. Create express server
 4. HTTP request & response
 5. nodemon adn morgan package
+6. Api testing with postman

@@ -5,16 +5,24 @@ const app = express();
 //Middleware
 app.use(morgan("dev"));
 
+const isLoggedIn = (req, res, next) => {
+  const login = false;
+  if (login) {
+    next();
+  } else {
+    return res.status(401).json({ message: "Please Login First " });
+  }
+};
+
+// =======Api cll mi========
+app.get("/user", isLoggedIn, (req, res) => {
+  res.status(200).send({
+    message: "Usr progile is reutend",
+  });
+});
+
 app.get("/test", (req, res) => {
   res.send("Api is wroking fine ");
-});
-
-app.post("/test", (req, res) => {
-  res.send("post Api is wroking fine ");
-});
-
-app.put("/test", (req, res) => {
-  res.send("put Api is wroking fine ");
 });
 
 app.listen(3001, () => {
