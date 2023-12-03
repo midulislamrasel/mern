@@ -12,10 +12,11 @@
 
 1. Course plan
 2. Envuronment setup
-3. Create express server
+3. Create express server -->express
 4. HTTP request & response
-5. nodemon adn morgan package
+5. nodemon adn morgan package --> nodemon,morgan
 6. Api testing with postman
 7. Middleware & types of Middleware
-8. Express Error Handling Middleware
-9. How to handle HTTP error
+8. Express Error Handling Middleware--> body-parser
+9. How to handle HTTP error --> http error
+10. How to secure API --> xss clean , express-rate-limit
