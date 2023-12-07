@@ -20,4 +20,6 @@
 8. Express Error Handling Middleware--> body-parser
 9. How to handle HTTP error --> http error
 10. How to secure API --> xss clean , express-rate-limit (1 minit 5 time to chack in login )
-11. Environment variable & .gitignore
+11. Environment variable & .gitignore .env (install env package)
+<!-------------->
+12. MVC (Models, vewe ,contollers) Architecture

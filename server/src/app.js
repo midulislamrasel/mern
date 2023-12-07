@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const createError = require("http-errors");
 // const xssClean = require("xxs-clean"); //NOT Working
 const rateLimit = require("express-rate-limit");
+const userRouter = require("./routers/userRouter");
 
 const app = express();
 
@@ -21,15 +22,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(xssClean()); //NOT Working
 // app.use(limiter());
 
+//user Router
+app.use("/api/users", userRouter);
+
 // =======Api cll mi========
 app.get("/test", limiter, (req, res) => {
   res.send("Api is wroking fine ");
-});
-
-app.get("/api/users", (req, res) => {
-  res.status(200).send({
-    message: "Usr progile is reutend",
-  });
 });
 
 //client error handling
